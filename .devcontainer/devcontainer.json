@@ -1,0 +1,14 @@
+{
+  "name": "Cloudix Linux PC Workstation",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu-24.04",
+  "postCreateCommand": "bash .devcontainer/setup.sh",
+  "postStartCommand": "bash .devcontainer/start.sh",
+  "forwardPorts": [6080],
+  "portsAttributes": {
+    "6080": {
+      "label": "Cloudix Linux Desktop",
+      "visibility": "public",
+      "onAutoForward": "silent"
+    }
+  }
+}
